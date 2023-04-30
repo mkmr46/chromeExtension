@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "PR Downloader",
+  "version": "1.0",
+  "description": "A simple extension that Downloads the Pull Request from Github.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [ "activeTab","scripting" ],
+  "host_permissions": [ "<all_urls>" ]
+}
